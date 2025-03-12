@@ -1,6 +1,6 @@
 [build]
 command = "pip install -r requirements.txt && streamlit run app.py"
-publish = "public"
+publish = "build"
 
 [build.environment]
 PYTHON_VERSION = "3.9"
@@ -13,11 +13,6 @@ port = 8501
 from = "/*"
 to = "/index.html"
 status = 200
-status = 200
 
 [[plugins]]
 package = "@netlify/plugin-functions-install-core"
-
-[functions]
-directory = "functions/"
-node_bundler = "esbuild"
